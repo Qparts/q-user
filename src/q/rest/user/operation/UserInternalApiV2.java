@@ -303,6 +303,18 @@ public class UserInternalApiV2 {
     }
 
     @SecuredUser
+    @GET
+    @Path("web-apps")
+    public Response getWebApps(){
+        try{
+            List<WebApp> webApps = dao.get(WebApp.class);
+            return Response.status(200).entity(webApps).build();
+        }catch (Exception ex){
+            return Response.status(500).build();
+        }
+    }
+
+    @SecuredUser
     @POST
     @Path("/match-token")
     public Response matchToken(Map<String,String> map) {

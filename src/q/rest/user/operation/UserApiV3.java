@@ -30,7 +30,7 @@ public class UserApiV3 {
         WebApp webApp = getWebAppFromAuthHeader(header);
         String password = Helper.cypher(map.get("password"));
         String email = map.get("username").trim().toLowerCase();
-        String sql = "select b from UserV3 b where b.status = :value0 and b.username = :value1 and b.password = :value2";
+        String sql = "select b from User b where b.status = :value0 and b.username = :value1 and b.password = :value2";
         User user = dao.findJPQLParams(User.class, sql, 'A', email, password);
         verifyNotNull(user);
         LoginObject loginObject = getLoginObject(user, webApp.getAppCode());

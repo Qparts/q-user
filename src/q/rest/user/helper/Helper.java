@@ -18,6 +18,11 @@ public class Helper {
         return new Date(cFrom.getTimeInMillis());
     }
 
+
+    public static Date addDays(Date original, long days) {
+        return new Date(original.getTime() + (1000L * 60 * 60 * 24 * days));
+    }
+
     public static Date getDateEndOfMonth(int year, int month) {
         Calendar cTo = new GregorianCalendar();
         cTo.set(year, month, 1, 0, 0, 0);
@@ -39,26 +44,30 @@ public class Helper {
         return new BigInteger(130, random).toString(32);
     }
 
-    public static String cypher(String text) throws NoSuchAlgorithmException {
-        String shaval = "";
-        MessageDigest algorithm = MessageDigest.getInstance("SHA-256");
+    public static String cypher(String text) {
+        try {
+            String shaval = "";
+            MessageDigest algorithm = MessageDigest.getInstance("SHA-256");
 
-        byte[] defaultBytes = text.getBytes();
+            byte[] defaultBytes = text.getBytes();
 
-        algorithm.reset();
-        algorithm.update(defaultBytes);
-        byte messageDigest[] = algorithm.digest();
-        StringBuilder hexString = new StringBuilder();
+            algorithm.reset();
+            algorithm.update(defaultBytes);
+            byte messageDigest[] = algorithm.digest();
+            StringBuilder hexString = new StringBuilder();
 
-        for (int i = 0; i < messageDigest.length; i++) {
-            String hex = Integer.toHexString(0xFF & messageDigest[i]);
-            if (hex.length() == 1) {
-                hexString.append('0');
+            for (int i = 0; i < messageDigest.length; i++) {
+                String hex = Integer.toHexString(0xFF & messageDigest[i]);
+                if (hex.length() == 1) {
+                    hexString.append('0');
+                }
+                hexString.append(hex);
             }
-            hexString.append(hex);
-        }
-        shaval = hexString.toString();
+            shaval = hexString.toString();
 
-        return shaval;
+            return shaval;
+        }catch (Exception ex){
+            return text;
+        }
     }
 }

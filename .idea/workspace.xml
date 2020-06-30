@@ -7,47 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cae010ee-d14c-4129-8a9d-4536c5ed3446" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/exception/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/exception/GlobalException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/filter/agent/InternalAppAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/filter/agent/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/filter/agent/JwtFilterSubscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/filter/agent/JwtFilterUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/filter/agent/JwtFilterUserSubscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/filter/annotation/InternalApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/filter/annotation/SubscriberJwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/filter/annotation/UserSubscriberJwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/helper/AppConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/helper/KeyConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/model/contract/LoginObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/model/entity/v3/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/q/rest/user/model/entity/v3/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/bcprov-jdk15on-1.65.01.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/hibernate-types-52-2.9.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jjwt-api-0.11.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jjwt-impl-0.11.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jjwt-jackson-0.11.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/q_rest_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/q_rest_user.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/q-rest-user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/q-rest-user.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/filter/SecuredUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/q/rest/user/filter/annotation/UserJwt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/filter/SecuredUserAgent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/filter/ValidApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/q/rest/user/filter/annotation/V3ValidApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/filter/ValidAppAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/q/rest/user/filter/agent/V3ValidAppAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/helper/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/q/rest/user/helper/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/contract/UserHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/contract/UserWithPassword.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/entity/AccessToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/entity/Activity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/q/rest/user/model/entity/v3/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/entity/RoleActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/entity/UserQuotingMake.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/entity/UserQuotingScore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/model/entity/UserRole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/q/rest/user/operation/UserInternalApiV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/q/rest/user/operation/UserApiV3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build19.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,11 +72,11 @@
       <recent name="q.rest.user.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/.idea/libraries" />
       <recent name="$PROJECT_DIR$/src/q/rest/user/filter/jwt/agent" />
       <recent name="$PROJECT_DIR$/src/q/rest/user/filter/jwt/annotation" />
       <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -177,11 +138,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -230,6 +186,8 @@
       <workItem from="1592724695337" duration="1137000" />
       <workItem from="1592784226650" duration="11000" />
       <workItem from="1593526812265" duration="395000" />
+      <workItem from="1593529619725" duration="254000" />
+      <workItem from="1593531128918" duration="18000" />
     </task>
     <servers />
   </component>

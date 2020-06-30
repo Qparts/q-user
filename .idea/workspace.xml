@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cae010ee-d14c-4129-8a9d-4536c5ed3446" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2048611" />
     <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
@@ -187,7 +187,9 @@
       <workItem from="1592784226650" duration="11000" />
       <workItem from="1593526812265" duration="395000" />
       <workItem from="1593529619725" duration="254000" />
-      <workItem from="1593531128918" duration="18000" />
+      <workItem from="1593531128918" duration="348000" />
+      <workItem from="1593531511264" duration="20000" />
+      <workItem from="1593544577690" duration="106000" />
     </task>
     <servers />
   </component>
@@ -265,9 +267,10 @@
     </state>
     <state width="958" height="221" key="GridCell.Tab.1.right/0.23.1440.798@0.23.1440.798" timestamp="1593527207310" />
     <state width="666" height="204" key="GridCell.Tab.1.right/1440.-73.1024.745/0.23.1440.797@1440.-73.1024.745" timestamp="1592727700740" />
-    <state x="208" y="23" key="SettingsEditor" timestamp="1593527045307">
-      <screen x="0" y="23" width="1440" height="798" />
+    <state x="208" y="23" key="SettingsEditor" timestamp="1593544692959">
+      <screen x="0" y="23" width="1440" height="795" />
     </state>
+    <state x="208" y="23" key="SettingsEditor/0.23.1440.795@0.23.1440.795" timestamp="1593544692959" />
     <state x="208" y="23" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1592721131930" />
     <state x="208" y="23" key="SettingsEditor/0.23.1440.798@0.23.1440.798" timestamp="1593527045307" />
     <state x="208" y="23" key="SettingsEditor/1440.-73.1024.745/0.23.1440.797@0.23.1440.797" timestamp="1592721319627" />

@@ -8,6 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cae010ee-d14c-4129-8a9d-4536c5ed3446" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/q/rest/user/filter/agent/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/q/rest/user/filter/agent/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/q/rest/user/filter/agent/JwtFilterUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/q/rest/user/filter/agent/JwtFilterUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/q/rest/user/operation/UserApiV3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/q/rest/user/operation/UserApiV3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +198,7 @@
       <workItem from="1593531511264" duration="20000" />
       <workItem from="1593544577690" duration="1014000" />
       <workItem from="1593591841886" duration="58000" />
-      <workItem from="1595359998199" duration="5045000" />
+      <workItem from="1595359998199" duration="5549000" />
     </task>
     <servers />
   </component>

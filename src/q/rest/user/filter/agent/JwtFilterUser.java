@@ -13,7 +13,9 @@ public class JwtFilterUser extends JwtFilter {
 
     @Override
     public void validateType(Object type) throws Exception{
+        System.out.println("at user service jwtfilteruser: cecking if its user  is of type : "   + type.toString());
         if(!type.toString().equals("U")){
+            System.out.println("throwing exception?");
             throw new Exception();
         }
     }

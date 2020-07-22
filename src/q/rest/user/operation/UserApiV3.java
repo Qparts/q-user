@@ -49,6 +49,7 @@ public class UserApiV3 {
     @UserJwt
     @Path("roles")
     public Response getRoles(){
+        System.out.println("received called roles at resource");
         List<Role> roles = dao.get(Role.class);
         return Response.ok().entity(roles).build();
     }

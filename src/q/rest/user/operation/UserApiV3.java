@@ -1,11 +1,15 @@
 package q.rest.user.operation;
 
 import q.rest.user.dao.DAO;
+import q.rest.user.filter.annotation.UserJwt;
 import q.rest.user.filter.annotation.V3ValidApp;
 import q.rest.user.helper.Helper;
 import q.rest.user.helper.KeyConstant;
 import q.rest.user.model.contract.LoginObject;
+import q.rest.user.model.contract.UserCreateHolder;
 import q.rest.user.model.entity.*;
+import q.rest.user.model.entity.v3.Activity;
+import q.rest.user.model.entity.v3.Role;
 import q.rest.user.model.entity.v3.User;
 
 import javax.ejb.EJB;
@@ -22,6 +26,69 @@ public class UserApiV3 {
 
     @EJB
     private DAO dao;
+
+
+    @GET
+    @UserJwt
+    @Path("users")
+    public Response getUsers(){
+        List<User> users = dao.get(User.class);
+        return Response.status(200).entity(users).build();
+    }
+
+    @GET
+    @UserJwt
+    @Path("activities")
+    public Response getActivities(){
+        List<Activity> activities = dao.get(Activity.class);
+        return Response.ok().entity(activities).build();
+    }
+
+
+    @GET
+    @UserJwt
+    @Path("roles")
+    public Response getRoles(){
+        List<Role> roles = dao.get(Role.class);
+        return Response.ok().entity(roles).build();
+    }
+
+
+
+    @POST
+    @Path("role")
+    @UserJwt
+    public Response createGeneralRole(Role role) {
+        dao.persist(role);
+        return Response.status(200).entity(role).build();
+    }
+
+    @PUT
+    @Path("role")
+    @UserJwt
+    public Response updateGeneralRole(Role role) {
+        dao.update(role);
+        return Response.status(200).entity(role).build();
+    }
+
+    @POST
+    @Path("user")
+    @UserJwt
+    public Response createUser(UserCreateHolder holder){
+        holder.getUser().setPassword(Helper.cypher(holder.getPassword()));
+        dao.persist(holder.getUser());
+        return Response.ok().build();
+    }
+
+    @PUT
+    @Path("user")
+    @UserJwt
+    public Response updateGeneralRole(User user) {
+        User orig = dao.find(User.class, user.getId());
+        user.setPassword(orig.getPassword());
+        dao.update(user);
+        return Response.status(200).entity(user).build();
+    }
 
     @POST
     @Path("login")

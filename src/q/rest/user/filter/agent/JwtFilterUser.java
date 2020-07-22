@@ -13,7 +13,6 @@ public class JwtFilterUser extends JwtFilter {
 
     @Override
     public void validateType(Object type) throws Exception{
-        System.out.println("User validating");
         if(!type.toString().equals("U")){
             throw new Exception();
         }

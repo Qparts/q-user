@@ -32,7 +32,7 @@ public class UserApiV3 {
     @UserJwt
     @Path("users")
     public Response getUsers(){
-        List<User> users = dao.get(User.class);
+        List<User> users = dao.getOrderBy(User.class, "id");
         return Response.status(200).entity(users).build();
     }
 
@@ -40,7 +40,7 @@ public class UserApiV3 {
     @UserJwt
     @Path("activities")
     public Response getActivities(){
-        List<Activity> activities = dao.get(Activity.class);
+        List<Activity> activities = dao.getOrderBy(Activity.class, "id");
         return Response.ok().entity(activities).build();
     }
 
@@ -49,8 +49,7 @@ public class UserApiV3 {
     @UserJwt
     @Path("roles")
     public Response getRoles(){
-        System.out.println("received called roles at resource");
-        List<Role> roles = dao.get(Role.class);
+        List<Role> roles = dao.getOrderBy(Role.class, "id");
         return Response.ok().entity(roles).build();
     }
 

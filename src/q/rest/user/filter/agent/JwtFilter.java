@@ -23,11 +23,8 @@ public class JwtFilter implements ContainerRequestFilter {
             System.out.println("token ok");
             PublicKey key = KeyConstant.PUBLIC_KEY;
             Claims claims = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).getBody();
-            System.out.println("validating type");
             validateType(claims.get("typ"));
-            System.out.println("validating app code");
             validateAppCode(claims.get("appCode"));
-            System.out.println("everyting is ok");
         } catch (Exception e) {
             requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
         }

@@ -9,6 +9,7 @@ import q.rest.user.model.contract.LoginObject;
 import q.rest.user.model.contract.UserCreateHolder;
 import q.rest.user.model.entity.*;
 import q.rest.user.model.entity.v3.Activity;
+import q.rest.user.model.entity.v3.LoginAttempt;
 import q.rest.user.model.entity.v3.Role;
 import q.rest.user.model.entity.v3.User;
 
@@ -97,14 +98,24 @@ public class UserApiV3 {
         WebApp webApp = getWebAppFromAuthHeader(header);
         String password = Helper.cypher(map.get("password"));
         String email = map.get("username").trim().toLowerCase();
+        String ip = map.get("ipAddress");
         String sql = "select b from User b where b.status = :value0 and b.username = :value1 and b.password = :value2";
         User user = dao.findJPQLParams(User.class, sql, 'A', email, password);
+        saveAttempt(email, ip, user);
         verifyNotNull(user);
         LoginObject loginObject = getLoginObject(user, webApp.getAppCode());
         return Response.status(200).entity(loginObject).build();
     }
 
 
+    private void saveAttempt(String email, String ip, User user){
+        LoginAttempt loginAttempt = new LoginAttempt();
+        loginAttempt.setCreated(new Date());
+        loginAttempt.setIp(ip);
+        loginAttempt.setSuccess(user != null);
+        loginAttempt.setUsername(email);
+        dao.persist(loginAttempt);
+    }
 
     private WebApp getWebAppFromAuthHeader(String authHeader) {
         try {

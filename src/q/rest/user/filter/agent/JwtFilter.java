@@ -16,11 +16,8 @@ public class JwtFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
         try {
-            System.out.println("user service recived at filter");
             String authorizationHeader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-            System.out.println("auth " + authorizationHeader);
             String token = authorizationHeader.substring("Bearer".length()).trim();
-            System.out.println("token ok");
             PublicKey key = KeyConstant.PUBLIC_KEY;
             Claims claims = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).getBody();
             validateType(claims.get("typ"));

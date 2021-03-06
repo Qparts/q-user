@@ -28,7 +28,6 @@ public class UserApiV3 {
     @EJB
     private DAO dao;
 
-
     @GET
     @UserJwt
     @Path("users")

@@ -94,24 +94,15 @@ public class UserApiV3 {
     @Path("login")
     @V3ValidApp
     public Response login(@HeaderParam(HttpHeaders.AUTHORIZATION) String header, Map<String, String> map) {
-        System.out.println("received");
         WebApp webApp = getWebAppFromAuthHeader(header);
         String password = Helper.cypher(map.get("password"));
         String email = map.get("username").trim().toLowerCase();
         String ip = map.get("ipAddress");
-        System.out.println("pas: " + password);
-        System.out.println("email: " + email);
         String sql = "select b from User b where b.status = :value0 and b.username = :value1 and b.password = :value2";
-        System.out.println(sql);
         User user = dao.findJPQLParams(User.class, sql, 'A', email, password);
-        System.out.println(user == null);
-        System.out.println("save attempt");
         saveAttempt(email, ip, user);
-        System.out.println("verifying not null");
         verifyNotNull(user);
-        System.out.println("createing login object");
         LoginObject loginObject = getLoginObject(user, webApp.getAppCode());
-        System.out.println("login object cretED");
         return Response.status(200).entity(loginObject).build();
     }
 
